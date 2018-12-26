@@ -19,7 +19,7 @@ import Foreign.Ptr(Ptr, FunPtr)
 import System.IO
 
 import Pipes
-import Pipes.Prelude.Text(stdoutLn)
+import Pipes.Prelude as P
 
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
@@ -157,7 +157,7 @@ main = do
   invokeI @"Add" list "foo"
   invokeI @"Add" list "bar"
   let prodList = toProducer list                                                -- IEnumerable implementors can be converted to Producers (pipes package)
-  runEffect $ prodList >-> stdoutLn
+  runEffect $ prodList >-> P.stdoutLn
 
   d <- delegate @T_ParameterizedThreadStart onThreadStart                       -- Compatible Haskell functions can be turned into delegates
 

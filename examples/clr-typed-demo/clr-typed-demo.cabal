@@ -23,6 +23,5 @@ executable clr-typed-demo
                      , clr-bindings
                      , clr-marshal
                      , pipes
-                     , pipes-text
                      , text
 

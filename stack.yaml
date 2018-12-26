@@ -1,14 +1,11 @@
-resolver: nightly-2017-07-31
+resolver: nightly-2018-12-25 
 packages:
 - 'libs/clr-typed/'
 - 'libs/clr-host/'
 - 'libs/clr-bindings/'
 - 'libs/clr-import-gen/'
-- 'libs/clr-inline/'
 - 'libs/clr-marshal/'
 - 'examples/clr-typed-demo/'
-- 'examples/clr-inline-demo/'
-- 'utils/clr-win-linker/'
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
@@ -21,7 +18,6 @@ flags: {}
 extra-package-dbs: []
 
 # Control whether we use the GHC we find on the path
-system-ghc: false
 #
 # Require a specific version of stack, using version ranges
 # require-stack-version: -any # Default
